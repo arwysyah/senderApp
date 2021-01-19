@@ -11,12 +11,11 @@ import {
   Modal,
   Button,
 } from 'react-native';
-// import Modal from 'react-native-modal';
 import {styles, orangeColor, width} from '../styles/index';
 import {List, api} from '../components/index';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import axios from 'axios';
-const {sort, searchBar, container, btnWrap} = styles;
+const {sort, searchBar, container, btnWrap,modal,btn,img} = styles;
 
 const Home = ({navigation}) => {
   const [data, setData] = useState([]);
@@ -92,15 +91,15 @@ const Home = ({navigation}) => {
             />
             {isModalVisible === true && (
               <Modal isModalVisible={isModalVisible}>
-                <View style={styles.modal}>
+                <View style={modal}>
                   {filterCheck.map((dataCheck, key) => {
                     return (
                       <View style={{width: width / 2}} key={key}>
                         {checkDefault === key ? (
                           <View style={{paddingBottom: 20}}>
-                            <TouchableOpacity style={styles.btn}>
+                            <TouchableOpacity style={btn}>
                               <Image
-                                style={styles.img}
+                                style={img}
                                 source={{
                                   uri: 'https://i.stack.imgur.com/OWcpX.png',
                                 }}
@@ -112,9 +111,9 @@ const Home = ({navigation}) => {
                           <View style={{paddingBottom: 20}}>
                             <TouchableOpacity
                               onPress={() => sortData(key)}
-                              style={styles.btn}>
+                              style={btn}>
                               <Image
-                                style={styles.img}
+                                style={img}
                                 source={{
                                   uri: 'https://i.stack.imgur.com/Kn8zA.png',
                                 }}

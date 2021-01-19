@@ -61,6 +61,13 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     left: -8,
+    height:width/4
+  },
+  smallContainer:{
+    
+      flexDirection: 'row',
+      justifyContent: 'space-between',
+    
   },
   wrapper1: {
     flexDirection: 'row',
@@ -80,11 +87,12 @@ const styles = StyleSheet.create({
     borderBottomLeftRadius: 10,
     width: 15,
   },
-  SuccesCheck: {
+  succesCheck: {
     borderWidth: 2,
     width: 100,
     height: 30,
     borderRadius: 8,
+    backgroundColor:'#2aa854',
     top: 15,
     borderColor: '#2aa854',
   },
